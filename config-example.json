@@ -1,0 +1,15 @@
+{
+	"hookPath": "/github", //path GitHub posts to
+	"hookPort": ":8800", //port service runs on
+	"repos": [
+	{
+		"repository": "AustinDizzy/githook", //repository name (CASE SENSITIVE)
+		"secureKey": "testing123", //Secure key entered for WebHook
+		"dir": "/home/austin/go/src/githook" //Directory where git repository sits on local machine
+	},
+	{
+		"repository": "AustinDizzy/austindizzy.me",
+		"secureKey": "testinghmac",
+		"dir": "/var/www/austindizzy.me"
+	}]
+}
