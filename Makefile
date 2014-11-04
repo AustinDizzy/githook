@@ -20,3 +20,5 @@ install_deps:
 install_service:
 	sudo cp init.d/githook /etc/init.d/githook
 	sudo chmod +X /etc/init.d/githook
+	@mkdir -p log
+	@mkdir -p pid
