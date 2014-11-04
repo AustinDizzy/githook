@@ -36,15 +36,33 @@ var config *Config
 
 func init() {
 	dir, _ := filepath.Abs(filepath.Dir(os.Args[0]))
-	c, err := ioutil.ReadFile(dir + "/config.json")
-	if err != nil {
-		log.Println(err)
+	c, err := ioutil.ReadFile(dir + "/config1.json")
+	if os.IsNotExist(err) {
+		c, err = ioutil.ReadFile("/usr/local/etc/githook.json")
+		if os.IsNotExist(err) {
+			log.Println("Config file 'githook.json' doesn't exist in " + dir + " or /usr/local/etc/.")
+			log.Println("Exiting...")
+			os.Exit(1)
+		} else if err != nil {
+			log.Println(err.Error())
+			os.Exit(1)
+		} else {
+			err = json.Unmarshal(c, &config)
+			if err != nil {
+				log.Println(err)
+			}
+			log.Println("Loaded config:", config)
+		}
+	} else if err != nil {
+		log.Println(err.Error())
+		os.Exit(1)
+	} else {
+		err = json.Unmarshal(c, &config)
+		if err != nil {
+			log.Println(err)
+		}
+		log.Println("Loaded config:", config)
 	}
-	err = json.Unmarshal(c, &config)
-	if err != nil {
-		log.Println(err)
-	}
-	log.Println("Loaded config:", config)
 }
 
 func main() {

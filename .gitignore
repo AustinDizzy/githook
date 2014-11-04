@@ -1,2 +1,5 @@
+bin/
+log/
+pid/
+*.swp
 githook
-config.json
