@@ -1,7 +1,7 @@
 ![githook](https://cloud.githubusercontent.com/assets/2718133/4896295/bc003450-63f7-11e4-92fb-6875b5525e0c.png)
 
 
-Githook is a simple "[Continuous Integration](http://en.wikipedia.org/wiki/Continuous_integration)"-like self-hosted service that can receive GitHub webhooks and update local repositories accordingly. Githook is currently best for static sites, like my own [austindizzy.me](https://austindizzy.me), that have their entire static source [hosted on GitHub](https://github.com/AustinDizzy/austindizzy.me).
+Githook is a simple "[Continuous Integration](http://en.wikipedia.org/wiki/Continuous_integration)"-like self-hosted service that can receive [GitHub webhooks](https://developer.github.com/webhooks/) and update local repositories accordingly. Githook is currently best for static sites, like my own [austindizzy.me](https://austindizzy.me), that have their entire static source [hosted on GitHub](https://github.com/AustinDizzy/austindizzy.me).
 
 GitHook currently supports the following:
 
