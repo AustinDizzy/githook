@@ -3,7 +3,7 @@
 # START CONFIG EDITS
 
 BIN_APP='githook'
-APP_ROOT='/var/go/src/githook';
+APP_ROOT='/usr/local/bin';
 PID_LOC=$APP_ROOT/pid
 PID_FILE=$PIC_LOC/app.pid
 LOG_LOC=$APP_ROOT/log

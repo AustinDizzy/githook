@@ -26,6 +26,7 @@ $ go get github.com/austindizzy/githook
 $ cd $GOPATH/src/github.com/austindizzy/githook
 $ make install
 ```
+Then, follow instructions detailed in [Configuration](#Configuration).
  
 __Without Go:__
  
