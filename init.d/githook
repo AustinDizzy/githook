@@ -3,10 +3,10 @@
 # START CONFIG EDITS
 
 BIN_APP='githook'
-APP_ROOT='/usr/local/bin';
-PID_LOC=$APP_ROOT/pid
+APP_ROOT=/usr/local/bin
+PID_LOC=/usr/local/etc/githook/pid
 PID_FILE=$PIC_LOC/app.pid
-LOG_LOC=$APP_ROOT/log
+LOG_LOC=/usr/local/etc/githook/log
 LOG_FILE=$LOG_LOC/app.log
 
 # END CONFIG EDITS

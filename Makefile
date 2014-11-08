@@ -11,8 +11,9 @@ clean:
 	@rm -rf pid/*
 
 install: build install_service
+	sudo mkdir -p /usr/local/etc/githook
 	sudo cp bin/githook /usr/local/bin/githook
-	sudo cp githook.json /usr/local/etc/githook.json
+	sudo cp githook.json /usr/local/etc/githook/githook.json
 
 install_deps:
 	@go get
