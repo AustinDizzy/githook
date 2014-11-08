@@ -55,6 +55,17 @@ An example configuration file can be found as [githook.json](githook.json). For 
  2. The working directory of the binary (e.g. if the binary is running from `/var/githook`, the githook.json file must be stored there as well in the top directory).
   
 **Note**: If you really must house the githook.json file elsewhere on the system, the path to it can be edited in [main.go#L41](main.go#L41).
+
+To get your GitHub repository set up to work with githook, go to Repository Settings > Webhooks & Services > Add Webhook. Then fill in the following accordingly:
+
+```
+Payload URL: the hostname:port/path which githook is running on. Ex: https://hostname.tld:12345/githook
+             This information is configured in githook.json
+             
+Content/type: application/json
+Secret: An optional (read as: "recommended") security key to validate each payload is legitimate traffic.
+             Payload is signed using HMAC-SHA1.
+```
   
 ##License
   
