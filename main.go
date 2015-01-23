@@ -88,7 +88,7 @@ func gitHandle(w http.ResponseWriter, r *http.Request) {
 				macSum := fmt.Sprintf("sha1=%x", mac.Sum(nil))
 				if auth.SecureCompare(r.Header["X-Hub-Signature"][0], macSum) {
 					os.Chdir(repo.Dir)
-					cmd := exec.Command("git", "pull")
+					cmd := exec.Command("git", "fetch")
 					out, err := cmd.Output()
 
 					if err != nil {
